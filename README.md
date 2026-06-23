@@ -9,3 +9,5 @@ Features:
 * peek() - return item from the top of the stack but not returning it
 * is_empty() - check if stack is empty
 * size() - return number of items inside the stack
+* Type hints throughout the code as would be for custom data structures
+* Test with pytest for good practice
