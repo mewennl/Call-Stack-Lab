@@ -6,7 +6,7 @@ class TestStack:
     def test_init(self):
         stack = Stack()
         assert stack.size() == 0
-        assert stack.stack == deque([])
+        assert stack.is_empty() == True
 
     def test_add(self):
         stack = Stack()
@@ -35,6 +35,14 @@ class TestStack:
         assert stack.is_empty() == False
         stack.pop()
         assert stack.is_empty() == True
+
+    def test_pop_peek_empty_raises(self):
+        stack = Stack()
+        with pytest.raises(IndexError):
+            stack.pop()
+        with pytest.raises(IndexError):
+            stack.peek()
+
 
 
 
