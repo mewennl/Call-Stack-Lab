@@ -5,6 +5,8 @@ I'm starting by building stack data structure and evolving it along versions int
 
 Starting with v1: A clean and simple stack abstraction. 
 
+# V1
+
 Features:
 * push(value) - add item to the top of the stack
 * pop() - remove item from the top of the stack and return
