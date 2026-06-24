@@ -1,5 +1,4 @@
 import pytest
-from collections import deque
 from src.call_stack.stack import Stack
 
 class TestStack:
