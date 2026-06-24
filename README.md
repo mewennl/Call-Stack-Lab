@@ -15,3 +15,12 @@ Features:
 * size() - return number of items inside the stack
 * Type hints throughout the code as would be for custom data structures
 * Test with pytest for good practice
+
+# V2
+
+Features:
+* Built the StackFrame and CallStack classes
+* StackFrame is implemented using a python dataclass in order to store the function name, args, local variables used, and a possible return value
+* CallStack uses the Stack datastructure to call and return frames, in essence pushing and popping them
+* Added peek method to CallStack to allow inspection of last frame without exposing internals
+* Tested each class and corresponding methods
