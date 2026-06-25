@@ -24,3 +24,11 @@ Features:
 * CallStack uses the Stack datastructure to call and return frames, in essence pushing and popping them
 * Added peek method to CallStack to allow inspection of last frame without exposing internals
 * Tested each class and corresponding methods
+
+# V3
+
+Features:
+* Expanded the CallStack class with a get_frames method to display the frames in the stack
+* Added a demo.py file meant to simulate what v5 will do without the manual input and instead automatically
+* demo.py visualizes how frames are pushed and popped at each step
+* Added iter method to stack for clean iteration without breaking encapsulation
