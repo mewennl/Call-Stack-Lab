@@ -32,3 +32,11 @@ Features:
 * Added a demo.py file meant to simulate what v5 will do without the manual input and instead automatically
 * demo.py visualizes how frames are pushed and popped at each step
 * Added iter method to stack for clean iteration without breaking encapsulation
+
+# V4
+
+Features:
+* Added exception propogation via raise_exception method in call stack
+* All frames get popped after raise_exception()
+* Allows for stack trace rendering, copying how traceback looks
+* Updated demo to show both normal exceution and exception propogation, two scenarios
