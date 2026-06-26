@@ -52,3 +52,23 @@ class TestCallStack:
         assert call_stack.get_frames() != []
         call_stack.return_(return_value=3)
         assert call_stack.get_frames() == []
+
+    def test_raise_exception_on_empty(self):
+        call_stack = CallStack()
+        assert call_stack.raise_exception(exception=ZeroDivisionError, message="division by zero") == "Traceback (most recent call last):\nZeroDivisionError: division by zero"
+
+    def test_stack_is_empty_after_raise_exception(self):
+        call_stack = CallStack()
+        call_stack.call(function_name="first", arguments=(1,), local_variables={"a":1})
+        call_stack.raise_exception(exception=ZeroDivisionError, message="division by zero")
+        assert call_stack.get_frames() == []
+
+    def test_raise_exception_output(self):
+        call_stack = CallStack()
+        call_stack.call(function_name="first", arguments=(1,), local_variables={"a":1})
+        call_stack.call(function_name="second", arguments=(2,), local_variables={"b":2})
+        result = call_stack.raise_exception(exception=ZeroDivisionError, message="division by zero")
+        assert "first" in result
+        assert "ZeroDivisionError" in result
+        assert "division by zero" in result
+
