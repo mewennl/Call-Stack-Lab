@@ -1,7 +1,8 @@
 # Call-Stack-Lab
 This is a small side project I wanted to do to explore what call stacks are. 
 
-I'm starting by building stack data structure and evolving it along versions into a full simulation of how a call stack works. I'm not trying to write a Python interpreter and reimplement CPython (for now). The goal of this little side project is to make the mechanics behind a call stack easy to reason about.
+I'm evolving a stack data structure along versions into a full simulation of how a call stack works. I'm not trying to write a Python interpreter and reimplement CPython (for now). The goal of this little side project is to make the mechanics behind a call stack easy to reason about.
+In the future I want to learn C in order to actually execute code instead of simulate, be able to build stack frames for builtins (print, len, etc.), and play with memory management.
 
 Starting with v1: A clean and simple stack abstraction. 
 
@@ -40,3 +41,11 @@ Features:
 * All frames get popped after raise_exception()
 * Allows for stack trace rendering, copying how traceback looks
 * Updated demo to show both normal exceution and exception propogation, two scenarios
+
+# V5
+
+Features:
+* Automatic stack tracing using a decorator function wrapping the target function between call_stack call and return_ methods, including print statements
+* Wrapped the decorator inside another function called tracer to create a decorator factory and have control over passing a call stack in
+* Used inspect.signature to grab the function signature of the target function, as the call method requires such parameters
+* Output shows the entire call stack after pushing and popping operations
