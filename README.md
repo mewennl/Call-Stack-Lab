@@ -1,8 +1,7 @@
 # Call-Stack-Lab
 This is a small side project I wanted to do to explore what call stacks are. 
 
-I'm evolving a stack data structure along versions into a full simulation of how a call stack works. I'm not trying to write a Python interpreter and reimplement CPython (for now). The goal of this little side project is to make the mechanics behind a call stack easy to reason about.
-In the future I want to learn C in order to actually execute code instead of simulate, be able to build stack frames for builtins (print, len, etc.), and play with memory management.
+I'm evolving a stack data structure along versions into a full simulation of how a call stack works. I'm not trying to write a Python interpreter and reimplement CPython (for now). The goal of this little side project is to make the mechanics behind a call stack easy to reason about. Then in V6 I will build this in C to model an actual call stack used by the python interpreter.
 
 Starting with v1: A clean and simple stack abstraction. 
 
